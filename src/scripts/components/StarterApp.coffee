@@ -3,10 +3,11 @@
 Masthead = require("./Masthead.coffee")
 MyNavbar = require("./MyNavbar.coffee")
 
-ReactTransitionGroup = React.addons.TransitionGroup
-imageURL = "/images/BladeRunner.gif"
+# ReactTransitionGroup = React.addons.TransitionGroup
+# imageURL = "/images/BladeRunner.gif"
 
-Button = ReactBootstrap.Button
+# Import only the components that we are using
+{Button, Grid, Row, Col} = ReactBootstrap
 
 StarterApp = React.createClass
 
@@ -36,6 +37,10 @@ StarterApp = React.createClass
       todos: [todo1, todo2]
     }
 
+  onClick: (event) ->
+    console.log event
+    @setState todos: []
+
   render: () ->
     todos = []
     for todo in @state.todos
@@ -48,16 +53,22 @@ StarterApp = React.createClass
           This template brings together all the pieces you need to start building your first React app.
           Gulp is used for orchastrating the build process, and Webpack is used to combine the Javascripts together.
         </Masthead>
-        <Button bsStyle='primary' className='center-block'>click me</Button>
+        <Button bsStyle='primary' className='center-block' onClick={this.onClick}>Clear</Button>
+
+        <Grid>
+          <Row className="show-grid">
+            <Col xs={4} md={12}><p>&lt;{'Col xs={12} md={8}'} /&gt;</p></Col>
+            <Col xs={4} md={12}><code>&lt;{'Col xs={6} md={4}'} /&gt;</code></Col>
+            <Col xs={4} md={12}><code>&lt;{'Col xs={6} md={4}'} /&gt;</code></Col>
+          </Row>
+        </Grid>
+
+
         <h2>Blocks</h2>
         <ul>
           {todos}
         </ul>
-        <ReactTransitionGroup transitionName="fade">
-          <div className="container">
-            <img className="center-block" src={imageURL} />
-          </div>
-        </ReactTransitionGroup>
+
       </div>
     )`
 
