@@ -5,6 +5,8 @@ Masthead = require("./Masthead.coffee")
 ReactTransitionGroup = React.addons.TransitionGroup
 imageURL = "/images/BladeRunner.gif"
 
+Button = ReactBootstrap.Button
+
 StarterApp = React.createClass
 
   getInitialState: () ->
@@ -33,13 +35,13 @@ StarterApp = React.createClass
       todos: [todo1, todo2]
     }
 
-
   render: () ->
     todos = []
     for todo in @state.todos
       todos.push(React.DOM.li {}, todo.description)
     `(
       <div className='main'>
+        <Button bsStyle='primary' className='center-block'>click me</Button>
         <Masthead title="Datamine">
           This template brings together all the pieces you need to start building your first React app.
           Gulp is used for orchastrating the build process, and Webpack is used to combine the Javascripts together.
