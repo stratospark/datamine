@@ -1,6 +1,7 @@
 `/** @jsx React.DOM */`
 
 Masthead = require("./Masthead.coffee")
+MyNavbar = require("./MyNavbar.coffee")
 
 ReactTransitionGroup = React.addons.TransitionGroup
 imageURL = "/images/BladeRunner.gif"
@@ -40,12 +41,14 @@ StarterApp = React.createClass
     for todo in @state.todos
       todos.push(React.DOM.li {}, todo.description)
     `(
+
       <div className='main'>
-        <Button bsStyle='primary' className='center-block'>click me</Button>
+        <MyNavbar name="Datamine"/>
         <Masthead title="Datamine">
           This template brings together all the pieces you need to start building your first React app.
           Gulp is used for orchastrating the build process, and Webpack is used to combine the Javascripts together.
         </Masthead>
+        <Button bsStyle='primary' className='center-block'>click me</Button>
         <h2>Blocks</h2>
         <ul>
           {todos}
