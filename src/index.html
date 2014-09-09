@@ -28,5 +28,27 @@
     <p>If you can see this, something is broken (or JS is not enabled)..</p>
   </div>
   <script type="text/javascript" src="assets/main.js"></script>
+
+
+  <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+  <script type="text/javascript">
+      /*
+      var socket = io.connect('http://localhost:8000/');
+      socket.on('todos created', function(todo) {
+          console.log('Someone created a new Todo', todo);
+      });
+
+      socket.emit('todos::create', {
+          description: 'You have to do something real-time!'
+      }, {}, function(error, todo) {
+          socket.emit('todos::find', {}, function(error, todos) {
+              console.log('Server todos:', todos);
+          });
+      });
+      */
+  </script>
+
+
+
 </body>
 </html>

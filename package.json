@@ -3,7 +3,10 @@
   "name": "react-starter-template",
   "version": "1.0.0",
   "homepage": "http://www.rigelgroupllc.com",
-  "dependencies": {},
+  "dependencies": {
+    "body-parser": "^1.8.1",
+    "feathers": "^1.0.0-pre.5"
+  },
   "devDependencies": {
     "gulp": "~3.8.7",
     "gulp-coffee": "~1.2.5",
@@ -17,7 +20,6 @@
     "coffee-loader": "~0.6.0",
     "script-loader": "~0.5.1",
     "gulp-clean": "~0.2.2",
-
     "gulp-livereload": "~0.2.0",
     "tiny-lr": "0.0.5",
     "express": "~3.4.8",
