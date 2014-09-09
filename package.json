@@ -5,7 +5,8 @@
   "homepage": "http://www.rigelgroupllc.com",
   "dependencies": {
     "body-parser": "^1.8.1",
-    "feathers": "^1.0.0-pre.5"
+    "feathers": "^1.0.0-pre.5",
+    "mongoose": "^3.8.16"
   },
   "devDependencies": {
     "gulp": "~3.8.7",
